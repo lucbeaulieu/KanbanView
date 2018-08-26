@@ -1,0 +1,57 @@
+<style type="text/css">
+html {
+height:100%; 
+max-height:100%; 
+padding:0; 
+margin:0; 
+border:0; 
+background:#fff; 
+font-size:76%; 
+font-family: helvetica, arial, sans-serif;
+overflow: hidden; 
+}
+
+body {height:100%; max-height:100%; overflow:hidden; padding:0; margin:0; border:0;}
+
+#head {position:absolute; margin:0; top:0; left:0; display:block; width:100%; height:100px; text-align:center; font-size:4em; z-index:5; color:black;}
+#foot {position:absolute; margin:0; bottom:0; left:0; display:block; width:100%; height:50px; font-size:0.8em; z-index:5; text-align:center; color:black;}
+
+#left1, #left2, #left3 {position:absolute; left:0; top:100px; bottom:50px; width:33%; font-family: Cursive; font-size:1em; z-index:4; overflow:auto;}
+* html #left1, * html #left2, * html #left3 {height:100%; top:0; bottom:0; border-top:100px solid #fff; border-bottom:50px solid #fff;}
+#left1 {left:0; background:#fff;}
+#left2 {left:33%; background:#fff;}
+#left3 {left:66%; background:#fff;}
+
+#box1 {
+    background-color: #cfc;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+#box2 {
+    background-color: #cfc;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+#box3 {
+    background-color: #FFA500;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+}
+#box4 {
+    background-color: #87CEFA;
+    padding: 5px;
+    margin: 0 0 5px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:15px;
+    overflow:hidden;
+}
+
+.inner {display:block; padding:0 10px 10px 10px;}
+.bold {font-size:1.5em; font-weight:bold;}
+</style>
