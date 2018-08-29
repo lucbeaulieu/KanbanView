@@ -27,12 +27,12 @@ def select_all_tasks(conn):
     nbArea=len(rowArea)
 
     #This will get all active project as long as they have due date
-    cur.execute("SELECT uuid, title, date(dueDate, 'unixepoch'), area FROM TMTask WHERE type = 1 AND status = 0 AND dueDate != 0 ORDER BY dueDate" )
+    cur.execute("SELECT uuid, title, date(dueDate, 'unixepoch'), area FROM TMTask WHERE type = 1 AND trashed = 0 AND status = 0 AND dueDate != 0 ORDER BY dueDate" )
     rowProj = cur.fetchall()
     nbProj=len(rowProj)
 
     #This will get all active project that do not have a due date
-    cur.execute("SELECT uuid, title, area FROM TMTask WHERE type = 1 AND (status = 0 AND dueDate IS NULL) ORDER BY area" )
+    cur.execute("SELECT uuid, title, area FROM TMTask WHERE type = 1 AND (status = 0 AND trashed = 0 AND dueDate IS NULL) ORDER BY area" )
     rowProj2 = cur.fetchall()
     nbProj2=len(rowProj2)
 
@@ -48,7 +48,7 @@ def select_all_tasks(conn):
     itot=0
     for row in rowProj:
         getID=rowProj[ip][0]
-        cur.execute("SELECT uuid, title, date(dueDate, 'unixepoch') FROM TMTask WHERE status = 0 AND project = '%s'" % getID)
+        cur.execute("SELECT uuid, title, date(dueDate, 'unixepoch') FROM TMTask WHERE status = 0 AND trashed = 0 AND project = '%s'" % getID)
         icount = cur.fetchall()
         ic=len(icount)
         #concatenate the task count back into the tuple containing all previous information
