@@ -3,12 +3,12 @@
 
 import sqlite3
 import webbrowser
-from os.path import expanduser
+from os.path import expanduser, dirname, realpath
 
 # Basic file info
 home = expanduser("~")
 sqlite_file = home + '/Library/Containers/com.culturedcode.ThingsMac/Data/Library/Application Support/Cultured Code/Things/Things.sqlite3'
-fout = '/Users/beaulieu/Documents/KanbanView/kanban.html'
+fout = dirname(realpath(__file__)) + '/kanban.html'
 
 mstr1 = []
 mstr2 = []
