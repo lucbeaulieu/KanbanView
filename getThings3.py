@@ -3,10 +3,11 @@
 
 import sqlite3
 import webbrowser
+from os.path import expanduser
 
 # Basic file info
-# Simply replace "beaulieu" below with you own user name
-sqlite_file = '/Users/beaulieu/Library/Containers/com.culturedcode.ThingsMac/Data/Library/Application Support/Cultured Code/Things/Things.sqlite3'
+home = expanduser("~")
+sqlite_file = home + '/Library/Containers/com.culturedcode.ThingsMac/Data/Library/Application Support/Cultured Code/Things/Things.sqlite3'
 fout = '/Users/beaulieu/Documents/KanbanView/kanban.html'
 
 mstr1 = []
