@@ -3,6 +3,7 @@
 
 import sqlite3
 import webbrowser
+import codecs
 from os.path import expanduser, dirname, realpath
 
 # Basic file info
@@ -73,7 +74,7 @@ def select_all_tasks(conn):
         ip=ip+1
    
     #Create the HTML file on the fly
-    f = open(fout,'w')
+    f = codecs.open(fout,'w','utf-8')
 
     message = """<head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
